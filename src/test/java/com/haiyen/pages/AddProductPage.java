@@ -24,7 +24,7 @@ public class AddProductPage extends CommonPage {
     private By inputSearchCategory = By.xpath("//div[@class='dropdown-menu show']//input[@aria-label='Search']");
     private By selectBrand = By.xpath("//button[@data-id='brand_id']");
     private By inputSearchBrand = By.xpath("//div[@class='dropdown-menu show']//input[@aria-label='Search']");
-    private By inputUnit = By.xpath("//input[@placeholder='Unit (e.g. KG, Pc etc)']");
+    private By inputUnit = By.xpath("//input[@name='unit']");
     private By inputWeight = By.xpath("//input[@name='weight']");
     private By inputTags = By.xpath("//span[@aria-placeholder='Type and hit enter to add a tag']");
     private By blockProductImages = By.xpath("//h5[normalize-space()='Product Images']");
@@ -71,8 +71,8 @@ public class AddProductPage extends CommonPage {
         WebUI.setTextAndClear(inputProductName, productName);
         WebUI.clickElement(selectCategory);
         WebUI.setTextEnter(inputSearchCategory, category);
-        WebUI.clickElement(selectBrand);
-        WebUI.setTextEnter(inputSearchBrand, "CMS brand 01");
+ //       WebUI.clickElement(selectBrand);
+ //       WebUI.setTextEnter(inputSearchBrand, "CMS brand 01");
         WebUI.waitForJQueryLoad();
         WebUI.sleep(2);
         WebUI.setTextAndClear(inputUnit, unit);
